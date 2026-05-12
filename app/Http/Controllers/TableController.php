@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Table;
 use Illuminate\Http\Request;
 
 class TableController extends Controller
@@ -27,7 +28,14 @@ class TableController extends Controller
      */
     public function store(Request $request)
     {
-       dd($request);
+    // //    dd($request->all());
+    //    Table::create([
+    //     'name' => $request->name,
+    //     'age'=> $request->age,
+    //     'country'=>$request->country
+    //    ]);
+    Table::create($request->all());
+    return redirect('/table');
     }
 
     /**
