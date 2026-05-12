@@ -9,4 +9,11 @@ Route::get('/', function () {
 });
 
 
+
+
 Route::get('/table',[TableController::class,'index'])->name('table');
+
+Route::get('/form',[TableController::class,'create'])->name('form');
+
+// store ma post
+Route::post('/store',[TableController::class,'store'])->name('store');

@@ -19,7 +19,7 @@ class TableController extends Controller
      */
     public function create()
     {
-        //
+        return view('form');
     }
 
     /**
@@ -27,7 +27,7 @@ class TableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       dd($request);
     }
 
     /**
