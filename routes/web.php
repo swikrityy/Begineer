@@ -17,3 +17,5 @@ Route::get('/form',[TableController::class,'create'])->name('form');
 
 // store ma post
 Route::post('/store',[TableController::class,'store'])->name('store');
+
+Route::get('/show/{id}',[TableController::class,'show'])->name('show');

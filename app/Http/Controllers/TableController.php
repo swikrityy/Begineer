@@ -14,7 +14,7 @@ class TableController extends Controller
      */
     public function index()
     {
-        $datas= table::get();
+        $datas= Table::get();
         // dd($datas);
         return view('table', compact('datas'));
     }
@@ -47,7 +47,8 @@ class TableController extends Controller
      */
     public function show(string $id)
     {
-        
+        $data=Table::find($id);
+        dd($data);
     }
 
     /**

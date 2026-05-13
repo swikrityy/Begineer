@@ -51,7 +51,7 @@
         <td>{{ $data->name }}</td>
         <td>{{ $data->age }} </td>
         <td>{{ $data->country }}</td>
-        <td><button>show</button></td>
+        <td><a href="{{ route('show',$data->id) }}"><button>show</button></a></td>
          </tr>
        
         @endforeach
