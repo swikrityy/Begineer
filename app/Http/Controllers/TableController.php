@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Table;
 use Illuminate\Http\Request;
 
+use function Laravel\Prompts\table;
+
 class TableController extends Controller
 {
     /**
@@ -12,7 +14,9 @@ class TableController extends Controller
      */
     public function index()
     {
-        return view('table');
+        $datas= table::get();
+        // dd($datas);
+        return view('table', compact('datas'));
     }
 
     /**

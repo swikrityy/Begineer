@@ -37,32 +37,26 @@
 
   <table>
     <tr>
-      <th>ID</th>
+     
       <th>Name</th>
       <th>Age</th>
       <th>Country</th>
     </tr>
 
     <tr>
-      <td>1</td>
-      <td>John</td>
-      <td>25</td>
-      <td>USA</td>
+     @foreach ( $datas as $data )
+        
+      <tr>
+        <td>{{ $data->name }}</td>
+        <td>{{ $data->age }} </td>
+        <td>{{ $data->country }}</td>
+        
+         </tr>
+       
+        @endforeach
     </tr>
 
-    <tr>
-      <td>2</td>
-      <td>Alice</td>
-      <td>28</td>
-      <td>Canada</td>
-    </tr>
-
-    <tr>
-      <td>3</td>
-      <td>David</td>
-      <td>30</td>
-      <td>UK</td>
-    </tr>
+    
   </table>
 
 </body>
