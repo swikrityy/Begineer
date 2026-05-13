@@ -48,15 +48,15 @@ class TableController extends Controller
     public function show(string $id)
     {
         $data=Table::find($id);
-        dd($data);
+        return view('singlepage', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
+     public function edit(string $id){
+        $userdata = Table::find($id);
+        return view ('editpage', compact('userdata'));
     }
 
     /**

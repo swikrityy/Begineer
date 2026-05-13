@@ -42,6 +42,7 @@
       <th>Age</th>
       <th>Country</th>
       <th>Show</th>
+      <th>editpage</th>
     </tr>
 
     <tr>
@@ -52,6 +53,7 @@
         <td>{{ $data->age }} </td>
         <td>{{ $data->country }}</td>
         <td><a href="{{ route('show',$data->id) }}"><button>show</button></a></td>
+        <td><a href="{{ route('editpage', $data->id) }}"><button>edit</button></a></td>
          </tr>
        
         @endforeach

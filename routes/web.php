@@ -19,3 +19,4 @@ Route::get('/form',[TableController::class,'create'])->name('form');
 Route::post('/store',[TableController::class,'store'])->name('store');
 
 Route::get('/show/{id}',[TableController::class,'show'])->name('show');
+Route::get('/editpage/{id}',[TableController::class,'edit'])->name('editpage');
