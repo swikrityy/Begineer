@@ -41,6 +41,7 @@
       <th>Name</th>
       <th>Age</th>
       <th>Country</th>
+      <th>Show</th>
     </tr>
 
     <tr>
@@ -50,7 +51,7 @@
         <td>{{ $data->name }}</td>
         <td>{{ $data->age }} </td>
         <td>{{ $data->country }}</td>
-        
+        <td><button>show</button></td>
          </tr>
        
         @endforeach
