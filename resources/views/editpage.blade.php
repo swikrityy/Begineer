@@ -65,16 +65,16 @@
     <form method="post" action="{{ route('store') }}">
         @csrf
       <label for="id">ID</label>
-      <input type="number" id="id" name="id" placeholder="Enter ID">
+      <input type="number" id="id" name="id"  placeholder="Enter ID">
 
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter Name">
+      <input type="text" id="name" name="name" value="{{ $userdata->name }}" placeholder="Enter Name">
 
       <label for="age">Age</label>
-      <input type="number" id="age" name="age" placeholder="Enter Age">
+      <input type="number" id="age" name="age" value="{{ $userdata->age }}" placeholder="Enter Age">
 
       <label for="country">Country</label>
-      <input type="text" id="country" name="country" placeholder="Enter Country">
+      <input type="text" id="country" name="country" value="{{ $userdata->country }}" placeholder="Enter Country">
 
       <button type="submit">Submit</button>
     </form>
