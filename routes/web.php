@@ -20,3 +20,7 @@ Route::post('/store',[TableController::class,'store'])->name('store');
 
 Route::get('/show/{id}',[TableController::class,'show'])->name('show');
 Route::get('/editpage/{id}',[TableController::class,'edit'])->name('editpage');
+
+Route::post('/update/{id}',[TableController::class,'update'])->name('update');
+
+Route::post('/delete/{id}',[TableController::class,'delete'])->name('delete');

@@ -64,7 +64,12 @@ class TableController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $table= Table::find($id);
+        $table->update([
+        // 'name'=>$request->name
+        ]);
+        $table->update($request->all());
+        return redirect ()->route('table');
     }
 
     /**

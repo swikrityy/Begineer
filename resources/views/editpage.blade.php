@@ -62,7 +62,7 @@
   <div class="form-container">
     <h2>User Registration Form</h2>
 
-    <form method="post" action="{{ route('store') }}">
+    <form method="post" action="{{ route('update',$userdata->id) }}">
         @csrf
       <label for="id">ID</label>
       <input type="number" id="id" name="id"  placeholder="Enter ID">
