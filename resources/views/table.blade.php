@@ -43,6 +43,7 @@
       <th>Country</th>
       <th>Show</th>
       <th>editpage</th>
+      <th>delete</th>
     </tr>
 
     <tr>
@@ -54,6 +55,10 @@
         <td>{{ $data->country }}</td>
         <td><a href="{{ route('show',$data->id) }}"><button>show</button></a></td>
         <td><a href="{{ route('editpage', $data->id) }}"><button>edit</button></a></td>
+        <td><form action="{{ route('delete',$data->id) }}" method="post">
+           @csrf
+          <button type="submit">delete</button></form></td>
+
          </tr>
        
         @endforeach
