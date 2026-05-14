@@ -11,17 +11,21 @@ Route::get('/', function () {
 
 
 
-Route::get('/table',[TableController::class,'index'])->name('table');
+Route::get('Table/table',[TableController::class,'index'])->name('table');
 
-Route::get('/form',[TableController::class,'create'])->name('form');
+Route::get('Table/form',[TableController::class,'create'])->name('form');
 
 // store ma post
-Route::post('/store',[TableController::class,'store'])->name('store');
+Route::post('Table/store',[TableController::class,'store'])->name('store');
 
-Route::get('/show/{id}',[TableController::class,'show'])->name('show');
+Route::get('Table/show/{id}',[TableController::class,'show'])->name('show');
 
-Route::get('/editpage/{id}',[TableController::class,'edit'])->name('editpage');
+Route::get('Table/editpage/{id}',[TableController::class,'edit'])->name('editpage');
 
-Route::post('/update/{id}',[TableController::class,'update'])->name('update');
+Route::post('Table/update/{id}',[TableController::class,'update'])->name('update');
 
-Route::post('/delete/{id}',[TableController::class,'destroy'])->name('delete');
+Route::post('Table/delete/{id}',[TableController::class,'destroy'])->name('delete');
+
+
+
+//blog
