@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Table;
 use App\Http\Controllers\TableController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,15 @@ Route::post('Table/delete/{id}',[TableController::class,'destroy'])->name('delet
 
 
 //blog
+Route::get('/blogtable',[BlogController::class,'index'])->name('blogtable');
+
+Route::get('/blogform',[BlogController::class,'create'])->name('blogform');
+Route::post('/blogstore',[BlogController::class,'store'])->name('blogstore');
+
+Route::get('/blogshow/{id}',[BlogController::class,'show'])->name('blogshow');
+
+Route::get('/blogedit/{id}',[BlogController::class,'edit'])->name('blogedit');
+
+Route::post('/blogupdate/{id}',[BlogController::class,'update'])->name('blogupdate');
+
+Route::post('/blogdelete/{id}',[BlogController::class,'destroy'])->name('blogdelete');

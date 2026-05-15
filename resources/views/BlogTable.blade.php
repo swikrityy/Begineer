@@ -77,18 +77,27 @@
           <th>Author</th>
           <th>Date</th>
           <th>Category</th>
-          <th>Action</th>
+          <th colspan="3">Action</th>
         </tr>
       </thead>
 
       <tbody>
         <tr>
-          <td>1</td>
-          <td>How to Learn HTML</td>
-          <td>John Doe</td>
-          <td>2026-05-14</td>
-          <td>Web Development</td>
-          <td><a href="#" class="read-btn">Read More</a></td>
+             @foreach ( $datas as $data )
+             <tr>
+
+             
+          <td>{{ $data->blogtitle }}</td>
+          <td>{{ $data->author }}</td>
+          <td>{{ $data->date }}</td>
+          <td>{{ $data->category }}</td>
+          <td><a href="{{ route('blogshow',$data->id) }}"><button>show</button></a></td>
+          <td><a href="{{ route('blogedit', $data->id) }}"><button>edit</button></a></td>
+          <td><form action="{{ route('blogdelete',$data->id) }}" method="post">
+           @csrf
+          <button type="submit">delete</button></form></td>
+        </tr>
+         @endforeach
         </tr>
 
        
