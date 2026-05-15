@@ -47,7 +47,7 @@
 
     <ul>
         <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Users</a></li>
+        <li><a href="#">Blogs</a></li>
         <li><a href="#">Orders</a></li>
         <li><a href="#">Products</a></li>
         <li><a href="#">Settings</a></li>

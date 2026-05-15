@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\NewController;
 use App\Http\Controllers\Table;
 use App\Http\Controllers\TableController;
 use Illuminate\Support\Facades\Route;
@@ -42,3 +43,6 @@ Route::get('/blogedit/{id}',[BlogController::class,'edit'])->name('blogedit');
 Route::post('/blogupdate/{id}',[BlogController::class,'update'])->name('blogupdate');
 
 Route::post('/blogdelete/{id}',[BlogController::class,'destroy'])->name('blogdelete');
+
+//dashboard
+Route::get('/admin/dashboard',[NewController::class,'dashboard'])->name('dashboard');

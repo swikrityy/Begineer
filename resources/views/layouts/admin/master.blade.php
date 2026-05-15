@@ -36,12 +36,12 @@
 <div class="dashboard">
 
     <!-- Sidebar -->
-    @include('sidebar')
+    @include('layouts.admin.sidebar')
 
     <div class="main-content">
 
         <!-- Header -->
-        @include('header')
+        @include('layouts.admin.header')
 
         <br>
 
