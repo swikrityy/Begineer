@@ -14,7 +14,7 @@ class BlogController extends Controller
     {
          $datas= Blog::get();
         // dd($datas);
-        return view('blogtable', compact('datas'));
+        return view('admin.blogs.index', compact('datas'));
     }
 
     /**
