@@ -74,12 +74,15 @@
     <table>
       <thead>
         <tr>
-          <th>ID</th>
+         
           <th>Blog Title</th>
           <th>Author</th>
           <th>Date</th>
           <th>Category</th>
-          <th colspan="3">Action</th>
+          <th >Show</th>
+          <th >Edit</th>
+          <th >Create</th>
+          <th >Delete</th>
         </tr>
       </thead>
 
@@ -88,13 +91,14 @@
              @foreach ( $datas as $data )
              <tr>
 
-             
+   
           <td>{{ $data->blogtitle }}</td>
           <td>{{ $data->author }}</td>
           <td>{{ $data->date }}</td>
           <td>{{ $data->category }}</td>
           <td><a href="{{ route('blogshow',$data->id) }}"><button>show</button></a></td>
           <td><a href="{{ route('blogedit', $data->id) }}"><button>edit</button></a></td>
+          <td><a href="{{ route('blogform', $data->id) }}"><button>create</button></a></td>
           <td><form action="{{ route('blogdelete',$data->id) }}" method="post">
            @csrf
           <button type="submit">delete</button></form></td>

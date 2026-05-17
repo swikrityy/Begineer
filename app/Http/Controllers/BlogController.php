@@ -22,7 +22,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blogform');
+        return view('admin.blogs.create');
     }
 
     /**
@@ -41,7 +41,7 @@ class BlogController extends Controller
     public function show(string $id)
     {
         $data=Blog::find($id);
-        return view('blogshow', compact('data'));
+        return view('admin.blogs.show', compact('data'));
     }
 
     /**
@@ -50,7 +50,7 @@ class BlogController extends Controller
     public function edit(string $id)
     {
         $userdata = Blog::find($id);
-        return view('blogedit', compact('userdata'));
+        return view('admin.blogs.edit', compact('userdata'));
     }
 
     /**
