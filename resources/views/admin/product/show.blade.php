@@ -52,23 +52,23 @@
     <h1>User Information</h1>
 
     <div class="info" >
-      <span>Product Name: {{ $data->product_name }}</span> 
+      <span>Product Name: {{ $product->product_name }}</span> 
     </div>
 
     <div class="info">
-      <span>Category: {{ $data->category }}</span> 
+      <span>Category: {{ $product->category }}</span> 
     </div>
 
     <div class="info">
-      <span>Price: {{ $data->price }}</span>
+      <span>Price: {{ $product->price }}</span>
     </div>
 
      <div class="info">
-      <span>Quantity: {{ $data->quantity }}</span>
+      <span>Quantity: {{ $product->quantity }}</span>
     </div>
 
     <div class="info">
-      <span>Description: {{ $data->description }}</span>
+      <span>Description: {{ $product->description }}</span>
     </div>
     
   </div>

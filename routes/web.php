@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\NewController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Table;
 use App\Http\Controllers\TableController;
 use Illuminate\Support\Facades\Route;
@@ -46,3 +47,6 @@ Route::post('/blogdelete/{id}',[BlogController::class,'destroy'])->name('blogdel
 
 //dashboard
 Route::get('/admin/dashboard',[NewController::class,'dashboard'])->name('dashboard');
+
+//products
+Route::resource('product',ProductController::class);

@@ -12,15 +12,18 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $datas= Product::get();
+        // dd($datas);
+        return view('admin.product.index', compact('datas'));
     }
+   
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+       return view('admin.product.create');
     }
 
     /**
@@ -28,7 +31,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         Product::create($request->all());
+    return redirect()->route('product.index');
     }
 
     /**
@@ -36,7 +40,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('admin.product.show', compact('product'));
     }
 
     /**
@@ -44,7 +48,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view ('admin.product.edit', compact('product'));
     }
 
     /**
@@ -52,7 +56,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+       $product->update($request->all());
+       return redirect('/product');
     }
 
     /**
@@ -60,6 +65,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+       $product->delete();
+
+        return redirect()->route('product.index');
+
     }
 }

@@ -93,7 +93,7 @@ body{
 <div class="container">
     <h2>Product Form</h2>
 
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
 
         <div class="form-group">
             <label>Product　Name</label>
