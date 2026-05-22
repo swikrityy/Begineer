@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Table;
 use App\Http\Controllers\TableController;
 use Illuminate\Support\Facades\Route;
@@ -50,3 +51,5 @@ Route::get('/admin/dashboard',[NewController::class,'dashboard'])->name('dashboa
 
 //products
 Route::resource('product',ProductController::class);
+
+Route::resource('review',ReviewController::class);

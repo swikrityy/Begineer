@@ -50,6 +50,7 @@
        <li><a href="{{ route('blogtable') }}">Blogs</a></li>
         <li><a href="#">Orders</a></li>
         <li><a href="{{ route('product.index') }}">Products</a></li>
+        <li><a href="{{ route('review.index') }}">review</a></li>
         <li><a href="#">Settings</a></li>
     </ul>
 
