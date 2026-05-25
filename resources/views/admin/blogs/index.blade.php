@@ -64,6 +64,12 @@
     .read-btn:hover {
       background: #218838;
     }
+    .blog-image{
+     width: 80px;
+     height: 80px;
+     object-fit: cover;
+     border-radius: 5px;
+}
   </style>
 </head>
 <body>
@@ -97,7 +103,9 @@
           <td>{{ $data->author }}</td>
           <td>{{ $data->date }}</td>
           <td>{{ $data->category }}</td>
-          <td>{{ $data->image }}</td>
+          <td>
+            <img src="{{ asset('/storage/'. $data->image) }}" alt="" class="blog-image">
+          </td>
           <td><a href="{{ route('blogshow',$data->id) }}"><button>show</button></a></td>
           <td><a href="{{ route('blogedit', $data->id) }}"><button>edit</button></a></td>
           <td><a href="{{ route('blogform', $data->id) }}"><button>create</button></a></td>
