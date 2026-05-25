@@ -106,7 +106,7 @@
           type="text" 
           id="fullname"
           name="fullname"
-          placeholder="Enter your name" 
+          placeholder="Enter your product name" 
           required
         >
       </div>

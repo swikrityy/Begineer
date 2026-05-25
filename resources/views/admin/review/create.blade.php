@@ -97,6 +97,7 @@
     <h2>Customer Review Form</h2>
 
     <form action="{{ route('review.store') }}" method="post">
+        @csrf
 
       <div class="form-group">
         <label for="fullname">Full Name</label>
@@ -104,7 +105,7 @@
           type="text" 
           id="fullname"
           name="fullname"
-          placeholder="Enter your name" 
+          placeholder="Enter your product name" 
           required
         >
       </div>
