@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
@@ -53,3 +54,6 @@ Route::get('/admin/dashboard',[NewController::class,'dashboard'])->name('dashboa
 Route::resource('product',ProductController::class);
 
 Route::resource('review',ReviewController::class);
+
+
+Route::resource('gallery',GalleryController::class);
