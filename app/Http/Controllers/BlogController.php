@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Session\Store;
 
 class BlogController extends Controller
 {
@@ -30,8 +31,12 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        Blog::create($request->all());
-    return redirect('/blogtable');
+       $validate=$request->all();
+       $path=$request->file('image')->Store('images','public');
+       $validate['image']=$path;
+
+       Blog::create($validate);
+       return redirect('/blogtable');
     }
     
 

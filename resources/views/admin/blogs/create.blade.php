@@ -112,7 +112,8 @@
 
     <h2>Create Blog Post</h2>
 
-    <form action="{{ route('blogstore') }}" method="post">
+    <form action="{{ route('blogstore') }}" method="post" enctype="multipart/form-data">
+      @csrf
       <div class="form-group">
         <label for="title">Blog Title</label>
         <input type="text" id="blogtitle" name="blogtitle" placeholder="Enter blog title">
@@ -142,6 +143,12 @@
       <div class="form-group">
         <label for="content">Blog Content</label>
         <textarea id="content" name="content" placeholder="Write your blog content here..."></textarea>
+      </div>
+
+       <div class="form-group">
+        <label for="image">Image</label>
+         <input type="file" name="image">
+      
       </div>
 
       <button type="submit" class="submit-btn">Add Blog</button>

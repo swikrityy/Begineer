@@ -79,6 +79,7 @@
           <th>Author</th>
           <th>Date</th>
           <th>Category</th>
+          <th>Images</th>
           <th >Show</th>
           <th >Edit</th>
           <th >Create</th>
@@ -96,6 +97,7 @@
           <td>{{ $data->author }}</td>
           <td>{{ $data->date }}</td>
           <td>{{ $data->category }}</td>
+          <td>{{ $data->image }}</td>
           <td><a href="{{ route('blogshow',$data->id) }}"><button>show</button></a></td>
           <td><a href="{{ route('blogedit', $data->id) }}"><button>edit</button></a></td>
           <td><a href="{{ route('blogform', $data->id) }}"><button>create</button></a></td>
