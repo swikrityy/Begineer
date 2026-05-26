@@ -68,8 +68,9 @@
     <div class="form-container">
         <h2>Create Gallery</h2>
 
-        <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('gallery.update',$gallery) }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
 
             <div class="form-group">
                 <label>Upload Image</label>
