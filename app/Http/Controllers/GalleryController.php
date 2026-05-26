@@ -65,7 +65,7 @@ class GalleryController extends Controller
     public function update(Request $request, Gallery $gallery)
     {
        
-        $gallery->update([]);
+        
         $gallery->update($request->all());
         return redirect ()->route('gallery.index');
     }
