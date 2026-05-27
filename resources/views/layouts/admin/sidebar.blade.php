@@ -47,6 +47,7 @@
 
     <ul>
         <li><a href="#">Dashboard</a></li>
+         <li><a href="{{ route('home.index') }}">Home</a></li>
        <li><a href="{{ route('blogtable') }}">Blogs</a></li>
         <li><a href="#">Orders</a></li>
         <li><a href="{{ route('product.index') }}">Products</a></li>

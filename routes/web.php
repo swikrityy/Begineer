@@ -2,15 +2,20 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Table;
 use App\Http\Controllers\TableController;
+use App\Models\Home;
 use Illuminate\Support\Facades\Route;
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    $homepage = Home::first();
+    return view('home',compact('homepage'));
 });
 
 
@@ -57,3 +62,5 @@ Route::resource('review',ReviewController::class);
 
 
 Route::resource('gallery',GalleryController::class);
+
+Route::resource('home',HomeController::class);
