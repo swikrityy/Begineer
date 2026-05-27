@@ -14,13 +14,11 @@ class GalleryController extends Controller
     public function index()
     {
         $galleries = Gallery::all();
-
         return view('admin.gallery.index', compact('galleries'));
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
         return view('admin.gallery.create');
@@ -65,8 +63,20 @@ class GalleryController extends Controller
     public function update(Request $request, Gallery $gallery)
     {
        
-        
-        $gallery->update($request->all());
+        $data=$request->all();
+       
+
+        if ($request->hasFile('image')){
+            if ($gallery->image){
+                Storage::disk('public')->delete($gallery->image);
+
+            }
+            $path =$request->file('image')->store('images','public');
+            $data['image']=$path;
+
+        }
+        $gallery->update($data);
+
         return redirect ()->route('gallery.index');
     }
 
@@ -75,7 +85,13 @@ class GalleryController extends Controller
      */
     public function destroy(Gallery $gallery)
     {
-        $gallery->delete();
+       
+          if ($gallery->image){
+    
+                Storage::disk('public')->delete($gallery->image);
+
+            }
+             $gallery->delete();
 
         return redirect()->route('gallery.index');
 }
