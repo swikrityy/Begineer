@@ -279,17 +279,19 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>{{ $homepage->hero_title}}</h1>
-      <p>
-        Create modern, responsive, and professional websites
-        with beautiful UI design.
-      </p>
+ 
+<section class="hero">
+  <div class="hero-content">
 
-      <a href="#" class="btn">Get Started</a>
-    </div>
-  </section>
+    <h1>{{ $homepage->hero_title }}</h1>
+
+    <p>
+      {{ $homepage->hero_description }}
+    </p>
+
+    <a href="#" class="btn">Get Started</a>
+  </div>
+</section>
 
   <!-- Features -->
   <section class="features">
@@ -324,25 +326,26 @@
   </section>
 
   <!-- About -->
-  <section class="about">
+  <!-- About -->
+<section class="about">
 
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="About Image">
+  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="About Image">
 
-    <div class="about-text">
-      <h2>About Us</h2>
+  <div class="about-text">
 
-      <p>
-        We help businesses create stunning websites and digital experiences.
-        Our mission is to deliver beautiful, functional, and scalable solutions
-        for modern brands.
-      </p>
+    <h2>{{ $homepage->about_title }}</h2>
 
-      <br>
+    <p>
+      {{ $homepage->about_description }}
+    </p>
 
-      <a href="#" class="btn">Learn More</a>
-    </div>
+    <br>
 
-  </section>
+    <a href="#" class="btn">Learn More</a>
+
+  </div>
+
+</section>
 
   <!-- Services -->
   <section class="services">
