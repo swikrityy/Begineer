@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\Table;
 use App\Http\Controllers\TableController;
 use App\Models\Home;
@@ -64,3 +65,5 @@ Route::resource('review',ReviewController::class);
 Route::resource('gallery',GalleryController::class);
 
 Route::resource('home',HomeController::class);
+
+Route::resource('services',ServiceController::class);

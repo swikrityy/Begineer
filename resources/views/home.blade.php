@@ -346,40 +346,32 @@
   </div>
 
 </section>
-
-  <!-- Services -->
-  <section class="services">
+<!-- Services -->
+<section class="services">
 
     <div class="section-title">
-      <h2>Services</h2>
+        <h2>Services</h2>
     </div>
 
     <div class="service-grid">
 
-      <div class="service">
-        <h3>Web Development</h3>
-        <p>
-          High-quality websites built with modern technologies.
-        </p>
-      </div>
+        @foreach($services as $service)
 
-      <div class="service">
-        <h3>UI/UX Design</h3>
-        <p>
-          Creative and user-friendly interfaces for better engagement.
-        </p>
-      </div>
+        <div class="service">
+            <h3>{{ $service->title }}</h3>
 
-      <div class="service">
-        <h3>SEO Optimization</h3>
-        <p>
-          Improve your website ranking and visibility online.
-        </p>
-      </div>
+            <h5>{{ $service->sub_title }}</h5>
+
+            <p>
+                {{ $service->paragraph }}
+            </p>
+        </div>
+
+        @endforeach
 
     </div>
 
-  </section>
+</section>
 
   <!-- Testimonials -->
   <section class="testimonials">
