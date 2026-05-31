@@ -283,10 +283,10 @@
 <section class="hero">
   <div class="hero-content">
 
-    <h1>{{ $homepage->hero_title }}</h1>
+    <h1>{{ $homepage->hero_title ?? '' }}</h1>
 
     <p>
-      {{ $homepage->hero_description }}
+      {{ $homepage->hero_description ?? '' }}
     </p>
 
     <a href="#" class="btn">Get Started</a>
@@ -333,10 +333,10 @@
 
   <div class="about-text">
 
-    <h2>{{ $homepage->about_title }}</h2>
+    <h2>{{ $homepage->about_title ?? '' }}</h2>
 
     <p>
-      {{ $homepage->about_description }}
+      {{ $homepage->about_description ?? '' }}
     </p>
 
     <br>

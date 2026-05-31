@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.admin.master')
 
 @section('content')
 
@@ -6,7 +6,7 @@
 
     <h2 class="mb-4">Create Service</h2>
 
-    <form action="{{ route('services.store') }}" method="POST">
+    <form action="{{ route('services.store') }}" method="POST"  enctype="multipart/form-data">
         @csrf
 
         <div class="mb-3">
